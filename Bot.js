@@ -689,10 +689,10 @@ onWithdraw.on('text', async (ctx) => {
                     )
                     ctx.scene.leave('onWithdraw')
                     return 0;
-                } else if (ctx.message.text > 10){
+                } else if (ctx.message.text > 100){
                   ctx.replyWithMarkdown(
 
-                        '*⚠️ Maximum Withdrawal Is 10 ' + currency + '*', { reply_markup: { keyboard: [['💰 Balance'], ['🙌🏻 Invite', '🎁 Bonus', '🗂 Wallet'], ['💳 Withdraw', '📊 Statistics']], resize_keyboard: true } }
+                        '*⚠️ Maximum Withdrawal Is 100 ' + currency + '*', { reply_markup: { keyboard: [['💰 Balance'], ['🙌🏻 Invite', '🎁 Bonus', '🗂 Wallet'], ['💳 Withdraw', '📊 Statistics']], resize_keyboard: true } }
 
                     )
                     ctx.scene.leave('onWithdraw')
@@ -751,7 +751,7 @@ bot.action("approve",async(ctx) => {
              let mid = admin[0].mid 
              let comment = admin[0].comment 
              let amount = toWith
-             var url = 'https://job2all.xyz/api/index.php?mid='+mid+'&mkey='+mkey+'&guid='+swg+'&mob='+wallet+'&amount='+amount+'&info='+comment+'';
+             var url = 'https://full2sms.in/api/v1/disburse/paytm?mid='+mid+'&mkey='+mkey+'&guid='+swg+'&amount='+amount+'&mobile='+wallet+'&info='+comment+'';
               axios.post(url)
               .then(res => {
                 console.log("Result:\n"+res)
